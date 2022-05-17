@@ -7,24 +7,23 @@
     <title>Document</title>
     <script src="./jquery-3.6.0.min.js"></script>
     <style>
-        .a{
-            background-color: pink;
-        }
+
     </style>
 </head>
 <body>
-    <button id="btn">集成按钮，可以显示也可以隐藏</button>
-    <div class="a" style="width:200px;position: relative;">
-        123
-    </div>
+    <span>123</span>
+    <button>改变样式</button>
     <script>
-        $('#btn').click(function(){
-            var div =  $('div');
-            div.animate({height:'300px',opacity:'0.4'},'slow');
-            div.animate({width:'300px',opacity:'0.8'},'slow');
-            div.animate({height:'100px',opacity:'0.4'},"slow");
-            div.animate({width:'100px',opacity:'0.8'},"slow");
-        })
+        //获取样式
+        var width = $("span").css('width');
+        console.log(width);
     </script>
+    <!-- 
+                    
+
+
+
+     -->
+</body>
 </body>
 </html>

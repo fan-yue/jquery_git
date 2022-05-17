@@ -1,7 +1,8 @@
-- [首页](./README.md)
+- [选择器及事件](./README.md)
 - [jquery效果](./docs/01jquery%E6%95%88%E6%9E%9C.md)
-
-
+- [jquery节点](./docs/02jquery%E8%8A%82%E7%82%B9.md)
+- [jq对css的操作](./docs/03jquery中对css的操作.md)
+- [jquery文本和属性操作](./docs/04jquery%E6%96%87%E6%9C%AC%E5%92%8C%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C.md)
 
 
 

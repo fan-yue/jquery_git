@@ -7,22 +7,23 @@
     <title>Document</title>
     <script src="./jquery-3.6.0.min.js"></script>
     <style>
-        div{
+        .a{
             background-color: pink;
-            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <button id="btn">按钮</button>
-    <div id="div1">div1</div>
-    <div id="div2">div2</div>
-    <div id="div3">div3</div>
+    <button id="btn">集成按钮，可以显示也可以隐藏</button>
+    <div class="a" style="width:200px;position: relative;">
+        123
+    </div>
     <script>
         $('#btn').click(function(){
-            $("#div1").fadeTo("slow",0.15);
-            $("#div2").fadeTo("slow",0.4);
-            $("#div3").fadeTo("slow",0.7);
+            var div =  $('div');
+            div.animate({height:'300px',opacity:'0.4'},'slow');
+            div.animate({width:'300px',opacity:'0.8'},'slow');
+            div.animate({height:'100px',opacity:'0.4'},"slow");
+            div.animate({width:'100px',opacity:'0.8'},"slow");
         })
     </script>
 </body>

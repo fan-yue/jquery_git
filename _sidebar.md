@@ -3,6 +3,7 @@
 - [jquery节点](./docs/02jquery%E8%8A%82%E7%82%B9.md)
 - [jq对css的操作](./docs/03jquery中对css的操作.md)
 - [jquery文本和属性操作](./docs/04jquery%E6%96%87%E6%9C%AC%E5%92%8C%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C.md)
+- [$下常用的方法](./docs/05jquery$下常用的方法.md)
 
 
 

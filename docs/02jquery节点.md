@@ -185,3 +185,24 @@
     </script>
 ```
 
+
+
+## eq（） 下标
+
+```
+    <ul>
+        <li>
+            <a href="#">水果</a>
+            <ul class="one">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        $('.one').children().eq(1).css('color','red');
+    </script>
+```
+

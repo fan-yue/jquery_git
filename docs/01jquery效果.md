@@ -309,7 +309,7 @@ $(selector).slideToggle(speed,callback);
 
 
 
-可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+可选的 speed 参数规定效果的时长。它可以取以下值："`slow`"、"`fast`" 或`毫秒`。
 
 可选的 callback 参数是滑动完成后所执行的函数名称。
 
@@ -339,9 +339,9 @@ $(selector).slideToggle(speed,callback);
 $(selector).animate({params},speed,callback);
 ```
 
-必需的 params 参数定义形成动画的 CSS 属性。
+必需的 `params` 参数定义形成动画的 `CSS` 属性。
 
-可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。
+可选的 speed 参数规定效果的时长。它可以取以下值："`slow`"、"`fast`" 或毫秒。
 
 可选的 callback 参数是动画完成后所执行的函数名称。
 
@@ -413,7 +413,7 @@ $(selector).animate({params},speed,callback);
 
 #### animate() - 使用预定义的值
 
-可以把属性的动画值设置为 "show"、"hide" 或 "toggle"
+可以把属性的动画值设置为 "`show`"、"`hide`" 或 "`toggle`"
 
 ```
     <button id="btn">集成按钮，可以显示也可以隐藏</button>
@@ -433,7 +433,7 @@ $(selector).animate({params},speed,callback);
 
 #### animate() - 使用队列功能
 
-jQuery 提供针对动画的队列功能，这意味着如果您在彼此之后编写多个 animate() 调用，jQuery 会创建包含这些方法调用的"内部"队列。然后逐一运行这些 animate 调用。
+jQuery 提供针对动画的队列功能，这意味着如果您在彼此之后编写多个 `animate()` 调用，jQuery 会创建包含这些方法调用的"内部"队列。然后逐一运行这些 `animate` 调用。
 
 ```
     <button id="btn">集成按钮，可以显示也可以隐藏</button>

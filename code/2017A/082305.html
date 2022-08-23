@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        div,p{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        123
+    </div>
+    <script>
+        $('.a').hover(
+            function(){
+                console.log('测试');
+            },
+            function(){
+                console.log('移除');
+            }
+            
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- class选择器 -->
+    <div class="box">class</div>
+    <div class="box">class</div>
+    <div class="box">class</div>
+
+    <script>
+        $(function(){
+            // 类选择器
+            $('.box').css({
+                color:'red',
+                background:'black',
+                // 复合类型的css样式可以采用 单引号包裹 形式才可以生效
+                // 'margin-bottom':'10px',
+                // 也可以使用 驼峰命名法
+                marginBottom:'10px'
+            })
+        })
+    </script>
+</body>
+</html>

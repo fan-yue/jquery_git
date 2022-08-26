@@ -81,13 +81,16 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 ### id选择器
 
+​	多个相同的id选择器，只有第一个id会生效
+
 ```
-    <div id="a">
-        123
-    </div>
+	<div id="one">123</div>
+    <div id="one">456</div>
+    <div id="one">789</div>
+    <div id="one">000</div>
+
     <script>
-        // 类选择器
-        $('#a').hide();
+        $('#one').css('color','blue');
     </script>
 ```
 
@@ -270,6 +273,108 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 
 <hr>
+## 简单过滤选择器
+
+### :first或者first()
+
+​	选择第一个元素
+
+
+
+### :last获last()
+
+​	选择最后一个元素
+
+
+
+### :not(selector)
+
+​	选择除了这个**selector**之外的元素
+
+
+
+### :even
+
+​	选择偶数元素
+
+
+
+### :odd
+
+​	选择奇数元素
+
+
+
+### :eq(index)
+
+​	选择第n个元素
+
+
+
+### :gt(index)
+
+​	选择大于第n个后的元素，不包含n，按照下标走。
+
+
+
+### :lt(index)
+
+​	小于第n个后的元素，不包含n，按照下标走。
+
+
+
+### :header
+
+​	选择h1~h6所有标题元素
+
+
+
+<hr>
+
+
+
+## 内容过滤选择器
+
+### :contains(text)
+
+​	选择获取包含指定文本内容的元素
+
+
+
+### :empty
+
+​	选择获取不包含子元素或文本内容的元素
+
+
+
+### :parent
+
+​	选择获取含有子元素或文本的元素
+
+
+
+### :has(selector)
+
+​	选择获取含有选择器所匹配的元素
+
+
+
+<hr>
+
+## 可见性过滤器
+
+### :hidden
+
+​	选择display:none或者隐藏文本域（hidden）的元素
+
+
+
+### :visible
+
+​	选择display:block的元素
+
+
+
 
 ### 总结：大部分<font color=red>jquery</font>的选择器跟css的选择器用法一模一样。
 
@@ -291,6 +396,10 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 | $(":button")             | 选取所有 type="button" 的 `<input>` 元素 和 `<button>` 元素 |
 | $("tr:even")             | 选取偶数位置的 `<tr>` 元素                                  |
 | $("tr:odd")              | 选取奇数位置的 `<tr>` 元素                                  |
+
+
+
+
 
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+		div{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+			</style>
+	</head>
+	<body>
+		<div></div>
+		<input type="text">
+		<script>
+			$(function(){
+				$("div").on("click",function(){
+					alert("我试试");
+				});
+				//自动触发事件
+				//1.元素.事件
+				//$("div").click();
+				//2.元素.trigger("事件")
+				//$("div").trigger("click");
+				//3.元素triggerHandler("事件")就是不会触发元素默认行为,比如文本框的光标
+				$("div").triggerHandler("click");
+			   $("input").on("focus",function(){
+				$(this).val("计算机一班");
+			});
+			//$("input").triggerHandler("focus");
+			$("input").trigger("focus");
+			
+			})
+		</script>
+	</body>
+</html>
+

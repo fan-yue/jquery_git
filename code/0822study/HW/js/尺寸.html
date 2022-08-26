@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color:pink;
+				padding: 10px;
+				border: 15px solid red;*/*边框*/
+			    margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script>
+			$(function(){
+				//1.width() / height() 获取设置元素 width和height大小
+				//console.log($("div").width());
+				//console.log($("div").height());
+				//2.innerWidth()/innerHeight()获取设置元素：width和height+padding大小
+				//console.log($("div").innerWidth());
+				//console.log($("div").innerHeight());
+				//3.outerWidth()/outerHeight()获取设置元素：width和height+padding+border
+				console.log($("div").outerWidth());
+				console.log($("div").outerHeight());
+				//4.outerWidth(true)/outerHeight(true)获取设置元素：width和height+padding+border+margin大小
+	             //console.log($("div").outerHeight(true));
+				 //console.log($("div").outerWidth(true));
+			});
+		</script>
+	</body>
+</html>

@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        .a{
+            color: aqua;
+        }
+        .b{
+            width: 100px;height: 100px;background: red;
+        }
+    </style>
 </head>
-<body> 
-    <img src="" alt="">
-    <!-- 兄弟元素（所有）选择器 -->
-    <div class="wa">   
-    </div>
-    <p>abc</p>
-    <p>abc</p>
-    <p>abc</p>
-    <div class="test">test</div>
+<body>
+    <div class="b">我爱学习</div>
 
     <script>
-        $(function(){
-            $('.wa~p').css('color','red');
-        })
+        var one = $('div').hasClass('b');
+        console.log(one);
     </script>
 </body>
 </html>

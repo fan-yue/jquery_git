@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+	</head>
+	<body>
+		<script>
+			$.ajax({
+				type:"get",
+				url:"txt.txt",
+				async:true,
+				success:function(data){
+					console.log(data);
+					var obj =JSON.parse(data);
+					console.log(obj);
+				}
+			});
+			/*$.ajax({
+				type:"get",
+				url:" txt.json",
+				async:true,
+				success:function(data){
+					console.log(data);
+					/*var obj =JSON.parse(data);
+					console.log(obj);*/
+			/*	}
+			});*/
+		</script>
+	</body>
+</html>

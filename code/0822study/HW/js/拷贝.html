@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+	</head>
+	
+	<body>
+		<script>
+			$(function(){
+				/*var king  = {};
+				var obj ={
+					id:1,
+					name:"q"
+				};*///把obj的值赋值给king里面
+				/*$.extend(king,obj);
+				console.log(king);*/
+				//king里面有值，把obj里面的值赋值给king里面 会覆盖之前King里面的值
+				/*var king  = {
+					id:1
+				};
+				var obj ={
+					id:18,
+					name:"q"
+				};//把obj的值赋值给king里面
+				$.extend(king,obj);
+				console.log(king);*/
+				/*var king  = {
+					id:1
+				};
+				var obj ={
+					id:18,
+					name:"q",
+					msg:{
+						id:100
+					}
+				};
+				$.extend(king,obj);
+				console.log(king);*/
+			//给king里面增加数据
+			var king  = {
+					id:1,
+					msg:{
+						id:200
+					}
+				};
+				var obj ={
+					id:18,
+					name:"q",
+					msg:{
+						id:18
+					}
+				};
+				//$.extend(king,obj);
+				//console.log(king);
+				//浅拷贝
+				//king.msg.id=20;
+				//console.log(king);
+				//console.log(obj);
+				//深拷贝：把里面的数据完全复制一份给目标对象 
+				$.extend(true,king,obj);
+				//console.log(king);
+				//深拷贝
+				king.msg.id=200;//只是给king.msg.id改变值
+				//console.log(king);
+				console.log(obj);
+				
+			})
+			
+		</script>
+	</body>
+</html>

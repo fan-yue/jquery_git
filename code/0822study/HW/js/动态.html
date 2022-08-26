@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src=" ../img/min.js"></script>
+	</head>
+	<style>
+	*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style-type: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		#nav{
+			width: 200px;
+			margin: 20px auto 0;
+		}
+		#nav>li a{
+			display: block;
+			color: white;
+			width: 150px;
+			height: 30px;
+			background-color: deepskyblue;
+			line-height: 30px;
+			text-indent: 10px;
+			border-bottom: 1px solid darkgray;
+		}
+		#nav>li>a{
+			background-color: #6495ED;
+		}
+		#nav li ul li a{
+			text-indent: 30px;
+			transition: 0.5s;
+			border-bottom: 1px solid darkgray;
+		}
+		#nav li ul li a:hover{
+			background-color: rgba(255,128,64,0.8);
+		}
+		#nav li ul{
+			display: none;
+		}
+		#nav li ul.current{
+			display: block;
+		}
+	</style>
+	<body>
+		<ul id="nav">
+			<li>
+				<a href="###" class="subnav">水果</a>
+				<ul class="current">
+					<li><a href="###">苹果</a></li>
+					<li><a href="###">梨子</a></li>
+					<li><a href="###">葡萄</a></li>
+					<li><a href="###">火龙果</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="###" class="subnav">海鲜</a>
+				<ul>
+					<li><a href="###">鱼</a></li>
+					<li><a href="###">扇贝</a></li>
+					<li><a href="###">龙虾</a></li>
+					<li><a href="###">螃蟹</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="###" class="subnav">肉类</a>
+				<ul>
+					<li><a href="###">羊肉</a></li>
+					<li><a href="###">牛肉</a></li>
+					<li><a href="###">猪肉</a></li>
+					<li><a href="###">宋林杰肉</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="###" class="subnav">蔬菜</a>
+				<ul>
+					<li><a href="###">娃娃菜</a></li>
+					<li><a href="###">西红柿</a></li>
+					<li><a href="###">西芹</a></li>
+					<li><a href="###">胡萝卜</a></li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="###" class="subnav">速冻</a>
+				<ul>
+					<li><a href="###">冰淇淋</a></li>
+					<li><a href="###">湾仔码头</a></li>
+					<li><a href="###">海参</a></li>
+					<li><a href="###">牛肉丸</a></li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+	<script type="text/javascript">
+		$(".subnav").click(function(){
+			$(this).next().stop().slideToggle().parent().siblings().children("ul").slideUp()
+		})
+	</script>
+	</body>
+</html>

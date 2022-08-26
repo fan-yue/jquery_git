@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		 <style>
+   .floor{
+    margin: 300px auto;
+    width: 800px;
+    
+   }
+   .floor img{
+    display: block;
+    margin-bottom:300px;
+   }
+  
+   .fixedtool {
+       position: fixed;
+       top: 100px;
+       left: 150px;
+       width: 100px;
+       background-color: #95ecde;
+       display: none;/*隐藏文字*/
+        margin-left: -40px;
+           }
+   .fixedtool li {
+       height: 50px;
+       line-height: 50px;
+       text-align: center;
+       font-size: 20px;
+       border-bottom: 4px solid #818181;
+       cursor: pointer;
+       
+   }
+   .back{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 17px;
+    cursor: pointer;
+   }
+   .fixedtool .current {
+       background-color: #2a70cb;
+       color: #fff;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="floor">
+   <div class="first w">
+   <img src="../img/1.jpg"  width="300">
+   </div>
+   <div class="second w">
+    <img src="../img/2.jpg"  width="300">
+   </div>
+   <div class="third w">
+    <img src="../img/3.jpg"  width="300">
+   </div>
+   <div class="four w">
+    <img src="../img/4.jpg"  width="300">
+   </div>
+   <div class="five w">
+    <img src="../img/5.jpg"  width="300">
+   </div>
+  </div>
+  <div class="fixedtool">
+      <ul>
+          <li class="current">看我</li>
+          <li>看我</li>
+          <li>看我</li>
+          <li>看我</li>
+         <li>看我</li>
+         <div class="back">返回顶部</div>
+      </ul>
+  </div>
+  <script>
+   //js
+   $(function(){
+    //节流阀当我们点击li此时不需要执行页面滚动事件里面的li的背景选择 添加curren
+    var flag = true;
+    //隐藏导航   offset().top用于获取距离文档顶部的距离，
+    var boxTop = $(".fixedtool").offset().top;
+    //使其在下面位置刷新的时候，导航栏同样出现
+    toggleTool();//显示电梯导航。封装成一个函数toggleTool()
+    function toggleTool(){
+     if ($(document).scrollTop() >= 300){
+      $(".fixedtool").fadeIn();
+     }else {
+      $(".fixedtool").fadeOut();
+     }
+    }
+    //给window对象绑定滚动事件，
+    $(window).scroll(function(){
+     // console.info($(document).scrollTop());  显示与文档顶部距离
+     toggleTool();
+     //  当页面滚动到某个内容区域的时候，电梯导航小li相应添加和删除current类名
+     if(flag){//each遍历内容大模块，each里面能拿到区域每一个模块元素和索引号
+      $(".floor .w").each(function(i,ele){
+      	//被卷去的头部大于等于内容区域里面每个模块的offset().top
+       if($(document).scrollTop() >= $(ele).offset().top{
+        console.info(i);
+        //点击之后当前的li添加current类名，其余姐妹移除current。点击颜色变化
+        $(".fixedtool li").eq(i).addClass("current").siblisngs().removeClass("current");
+       }
+      })
+     }
+    });
+    
+    // 2、 通过点击电梯页面里面的选项滚动到相应内容区域
+    $(".fixedtool li").click(function(){
+     //节流阀
+     flag = false;
+     console.log($(this).index());
+     // console.info($(".floor .w"));
+     //每次点击小i，可以计算页面要的位置
+     //选出对应索引号的内容区盒子，计算它的.offset().top距离顶部的值
+     var current = $(".floor .w").eq($(this).index()).offset().top;
+     //页面滚动效果
+     $("body,html").stop().animate({
+      scrollTop:current,//目标位置
+     },function() {
+      flag = true;
+     });
+     //点击之后，让当前li 添加current类名，兄弟节点移除current类名
+     $(this).addClass("current").siblings().removeClass("current");
+    })
+    // 返回顶部
+    $(".back").click(function(){
+     // $(document).scrollTop(0); 直接返回顶部
+     //animate()动画返回
+     // $(this).addClass("current");
+     $("body,html").stop().animate({
+      scrollTop:0,
+     });
+     
+    })
+   })
+  </script>
+ </body>
+</html>
+	

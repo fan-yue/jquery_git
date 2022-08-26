@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<!--<link rel="stylesheet" href="http:////at.alicdn.com/t/font_3443362_v1r1xc0kb9d.css">-->
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		.outer{/*和轮播图图片大小一致*/
+			height:200px;
+			width: 700px;
+			margin: 50px auto;/*距离顶部距离50*/
+			position: relative;/*设置固定位置*/
+		}
+		.img li{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.num{
+			position: absolute;
+			text-align: center;/*整体居中*/
+			width: 100%;
+			bottom: 20px;
+		}
+		.num li{/*顺序按钮*/
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: darkgoldenrod;
+			color: white;
+			text-align: center;
+			line-height: 20px;
+			border-radius: 50%;/*设置样式为圆形*/
+			margin: 0 20px;
+		}
+		/*.btn{
+			position: absolute;
+			width: 20px;
+			height: 50px;
+			background-color: darkgoldenrod;
+			color: white;
+			text-align: center;
+			line-height: 50px;
+			top: 50%;
+			margin-top: -25px;
+			display: none;
+		}*/
+		/*.left_btn{
+			left: 0;
+			}
+			.right_btn{
+			right: 0;
+		}*/
+		/*.outer:hover.btn{
+			display: inline-block;
+			cursor: pointer;
+		}*/
+		.current{
+			background-color: red!important;
+					}
+	</style>
+	<body>
+		<div class="outer">
+			<ul class="img">
+				<li><a><img src="../img/轮1.jpg"</a></li>
+				<li><a><img src="../img/轮2.jpg"</a></li>
+				<li><a><img src="../img/轮3.jpg"</a></li>
+				<li><a><img src="../img/轮4.jpg"</a></li>
+				<li><a><img src="../img/轮5.jpg"</a></li>
+				<li><a><img src="../img/轮6.jpg"</a></li>
+			</ul>
+			<ul class="num">
+				<li class="current"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<!--<div class="left_btn btn"></div>
+			<div class="right_btn btn"></div>-->
+		</div>
+		<script>
+			var index=0;/*mousemove 当鼠标持续移动时，该事件会连续触发 限定一段时间内只能运行一次*/
+			$(".num li").mousemove(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			index = $(this).index();
+			$(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+			});
+			/*设置时间*/
+			//setInterval 是一个实现定时调用的函数，
+			var time=setInterval(move,1000);
+			function move(){
+				index++;/*获取当前位置序号：自加操作，当图片最大序号设置为0*/
+				if(index==6){
+					index=0
+				}
+			$(".num li").eq(index).addClass("current").siblings().removeClass("current");
+			$(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+			};
+			/*当鼠标划入，划出轮播图区域：进去停止，出来动*/
+			$(".outer").hover(function(){
+				clearInterval(time);
+			},
+			function(){
+				time=setInterval(move,1000);
+			});
+		/*$(".right_btn").click(function(){
+			move();
+		});
+		function moveL(){
+			index--;
+			if(index==-1){
+				index==3
+			}
+		$(".num li").eq(index).addClass("current").siblings().removeClass("current");
+		$(".img li").eq(index).stop().fadeIn(1000).siblings().stop().fadeOut(1000);
+		}*/
+		/*$(".left_btn").click(function(){
+			moveL();
+});*/
+		</script>
+	</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+			/**{
+				 margin: 0;
+            padding: 0;
+			}*/
+			.floor{
+				 margin: 300px auto;
+            width: 800px;
+			}
+			.floor img{
+				display: block;
+              margin-bottom: 100px;
+			}
+			.fixedtool{
+				position: fixed;
+				top: 250px;
+				left: 150px;
+				width: 100px;
+				background-color: blueviolet;
+				display: none;
+			}
+			.fixedtool li{
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 17px;
+				border-bottom: 2px solid #ADFF2F;
+				cursor: pointer;
+			}
+			.back{
+				height: 40px;
+				line-height:40px;
+				text-align: center;
+				font-size: 17px;
+				cursor: pointer;
+			}
+			.fixedtool .current{
+				background-color: cyan;
+				color: #FFFF00;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="floor">
+			<div class="first w">
+				<img src="../img/1.jpg" width="300" alt="">
+			</div>
+			<div class="second w">
+				<img src="../img/2.jpg" width="300" alt="">
+			</div>
+			<div class="third w">
+				<img src="../img/3.jpg" width="300" alt="">
+			</div>
+			<div class="four w">
+				<img src="../img/4.jpg" width="300" alt="">
+			</div>
+			<div class="five w">
+				<img src="../img/5.jpg" width="300" alt="">
+			</div>
+		</div>
+		<div class="fixedtool">
+			<ul>
+		<li class="current">猜猜看吧</li>
+		<li>猜猜看吧</li>
+		<li>猜猜看吧</li>
+		<li>猜猜看吧</li>
+		<li>猜猜看吧</li>
+		<div class="back">返回顶部</div>
+		</ul>
+		</div>
+		<script>
+			$(function(){
+				var flag = true;
+				var boxTop= $(".fixedtool").offset().top;
+				toggleTool();
+				function toggleTool(){
+					if($(document).scrollTop() >=350){
+						$(".fixedtool").fadeIn();
+					}
+					else{
+						$(".fixedtool").fadeOut();
+					};
+				}
+				$(window).scroll(function(){
+					toggleTool();
+					if(flag){
+						$(".floor.w").each(function(i,ele){
+							if($(document).scrollTo()>= $(ele).offset().top)
+							{
+								$("fixedtool li").eq(i).addClass("current").siblings().removeClass("current");
+								
+							}
+					
+				})
+			$(".fixedtool li").click(function(){
+				flag=false;
+				console.info($(this).index());
+				var current=$(".floor.w").eq($(this).index()).offset().top;
+				$("body,html").stop().animate({
+					scrollTop:current,
+				},function(){
+					flag=ture;
+				
+				})
+				
+		$(this).addClass("current").siblings().removeClass("current");
+		})
+		$(".back").click(function(){
+			$("body,html").stop().animate({
+				scroTop:0,
+				
+			});
+			
+		});
+	
+		</script>
+	</body>
+</html>

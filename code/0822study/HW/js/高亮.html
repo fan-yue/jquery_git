@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script src="../img/min.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			body{
+				background: #000;
+			}
+			.wrap{
+				margin:100px auto 0;
+				width:630px;
+				height:394px;
+				padding: 10px 0 0 10px;
+				background:#000;
+				overflow: hidden;
+				border: 1px solid #FECC5B;
+				
+			}
+			.wrap li{
+				float: left;
+				margin: 0 10px 10px 0;
+			}
+			.wrap img{
+				display: block;
+				border: 0;
+				
+			}
+		</style>
+		<script>
+			$(function(){
+				$(".wrap li").hover(function(){/*鼠标进入时，其他li的透明度为0.5*/
+					$(this).siblings().stop().fadeTo(400,0.5);
+				},function(){/*鼠标离开时，其他li的透明度为1*/
+				$(this).siblings().stop().fadeTo(400,1);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li>
+					<a href="#"><img src="../img/01.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/02.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/03.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/4.jpg" alt=""></a>
+				</li>
+				<li>
+					<a href="#"><img src="../img/3.jpg" alt=""></a>
+				</li>
+
+                 <li>
+					<a href="#"><img src="../img/1.jpg" alt=""></a>
+				</li>
+
+			</ul>
+			
+		</div>
+	</body>
+</html>

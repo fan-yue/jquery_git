@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li class="li3">03</li>
+        <li>04</li>
+        <li>05</li>
+    </ul>
+    <h1>1</h1>
+    <h2>2</h2>
+    <h3>3</h3>
+    <h4>4</h4>
+    <h5>5</h5>
+    <h6>6</h6>
+    
+    <script>
+        // 选择h1~h6所有标题元素
+        $(':header').css('color','yellow')
+    </script>
+
+    <script>
+        // 小于第n个后的元素
+        // $('ul li:lt(3)').css('color','red');
+    </script>
+
+    <script>
+        // 大于第n个后的元素
+        // $('ul li:gt(3)').css('color','red');
+    </script>
+
+    <script>
+        // 第几个元素
+        // $('ul li:eq(1)').css('color','red');
+    </script>
+
+    <script>
+        // 奇数元素
+        // $('ul li:odd').css('color','red');
+    </script>
+
+    <script>
+        // 偶数元素
+        // $('ul li:even').hover(function(){
+        //     $(this).css('color','red');
+        // })
+    </script>
+
+    <script>
+        // 除 li3 这个之外的元素
+        // $('ul li:not(.li3)').css('color','blue');
+    </script>
+
+    <script>
+        // 最后一个元素
+        // $('ul li').last().css('color','red');
+    </script>
+
+    <script>
+        // 第一个元素
+        // $('ul li:first').css('color','red');
+    </script>
+
+    
+</body>
+</html>

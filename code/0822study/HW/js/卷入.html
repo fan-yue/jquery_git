@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+			/*div{
+				width: 2000px;
+				height: 2000px;
+				background-color:pink;
+				/*padding: 100px;*/
+			/*	}*/
+				.back{
+					position: fixed;
+					width: 50px;
+					height: 50px;
+					background-color: #FFFF00;
+					right: 30px;
+					bottom: 100px;
+					display: none;
+				}
+				.king{
+					width: 900px;
+					height: 500px;
+					background-color: aqua;
+					margin: 400px auto;
+
+				}
+		</style>
+	</head>
+	<body>
+	<div class="back">返回顶部</div>
+	<div class ="king"></div>
+<script>
+	$(function(){
+		//文档页面直接跳到100
+		//(document).scrollTop(100);
+		//1.被卷去的头部 scrollTop() / 被卷去的左侧scrollLeft()
+		//window页面滚动事件
+		//大于等于蓝色盒子到顶部的距离.
+		//蓝色盒子到顶部的值
+		var boxTop = $(".king").offset().top;
+	    $(window).scroll(function(){
+		//console.log(11);//页面打印11 检查事件是否加载成功
+		//document文档
+		console.log($(document).scrollTop());
+		if ($(document).scrollTop() >= boxTop)
+		{
+			$(".back").fadeIn();
+		}
+		else {
+			$(".back").fadeOut();
+		}
+		})
+	//返回顶部 不能是文档document，而是html和body元素
+	$(".back").click(function(){	
+	$("body,html").stop().animate({
+		scrollTop:0
+	});
+	   });
+
+	      });
+	</script>
+	</body>
+</html>

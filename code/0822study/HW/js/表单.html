@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+	<style>
+		.high{
+			color: cyan;
+		}
+		.formtips{
+			width: 200px;margin: 2px; padding: 2px;
+		}
+		.onSuccess{
+			background-color: #FF69B4 no-repeat 0 center;
+			padding-left: 25px;
+			}
+			.onError{
+				background-color: #00FFFF no-repeat 0 center;
+				padding-left: 25px;
+			}
+			td{
+				width: 500px;
+			}
+			#btn{
+				width: 100%; background-color: darkgreen;font:100;color: burlywood;
+			}
+	</style>
+	<script>
+			$(document).ready(function(){
+				$("input.required").each(function(){
+					$(this).parent().append("<span class='high'>*</span>");
+				});
+				$("input").blur(function(){
+					var $parent=$(this).parent();
+					$parent.find(".formtips").remove();
+					if($(this).is("#username")){
+						if(this.value==""){
+							$parent.append("<span class='formtips onError'>用户名不能为空</span>")
+							
+						}else{
+						$parent.append("<span class='formtips onSuccess'>用户名正确</span>")	
+						} 
+					}
+				if($(this).is("#password")){
+					if(this.value==""){
+						$parent.append("<span class='formtips onError'>密码不能为空</span>")
+					}else{
+						alert(this.value);
+						if(this.vlue.length ! =6){
+							$parent.append("<span class='formtips onError'>密码为6位</span>")
+						}else{
+						$parent.append("<span class='formtips onSuccess'>密码正确</span>")	
+						}
+				}
+					}
+				if($(this).is("#email")){
+					if(this.value==""){
+							$parent.append("<span class='formtips onError'>邮箱不能为空</span>")
+							
+						}else{
+						$parent.append("<span class='formtips onSuccess'>邮箱正确</span>")	
+						} 
+					}
+			
+				})
+			$("form").submit(function(){
+				$("form input").trigger("blur");
+				if($("onError").length>0)return false;
+			});
+			});
+		</script>
+		</head>
+	<body>
+		<div class="table">
+			<form id="formTable" action="发布微博.html#weibo" method="post">
+				<table border="1" cellspacing=""cellpadding="">
+					<tr>
+						<td>用户名：</td>
+						<td><input type="text" name="username" id="username" class="required"/></td>
+					<td></td>
+					</tr>
+					<tr>
+						<td>用户名：</td>
+						<td><input type="password" name="password" id="password" class="required"/></td>
+					<td></td>
+					</tr>
+					<tr>
+						<td>邮箱：</td>
+					<td><input type="text" name="email" id="email"/></td>
+					<td></td>	
+					</tr>
+					<tr>
+						<td colspan="3"><input id="btn"type="submit" value="注册"/></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

@@ -7,20 +7,23 @@
     <title>Document</title>
     <script src="./jquery-3.6.0.min.js"></script>
 </head>
-<body> 
-    <img src="" alt="">
-    <!-- 兄弟元素（所有）选择器 -->
-    <div class="wa">   
-    </div>
-    <p>abc</p>
-    <p>abc</p>
-    <p>abc</p>
-    <div class="test">test</div>
+<body>
+    <div>123</div>
+    <div>456</div>
+    <div>789</div>
+    <div>000</div>
+    
 
     <script>
-        $(function(){
-            $('.wa~p').css('color','red');
-        })
+        var a = $('div').css('color','red');
+        console.log(a);
     </script>
+
+    <!-- <div>123</div>
+
+    <script>
+        var div1 = document.querySelector('div');
+        console.log(div1);
+    </script> -->
 </body>
 </html>

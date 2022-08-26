@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+<ul>
+	<li>计算机一班</li>
+	<li>计算机一班</li>
+	<li>计算机一班</li>
+	<li>计算机一班</li>
+	</ul>
+	<p>我是屁</p>
+		<script>
+			$(function(){//on绑定两个事件
+				$("div").on({
+					click:function(){
+						console.log("我已经点击了");
+					},
+					mouseover:function(){
+						console.log("我鼠标已经经过了")
+					}
+				});
+				$("ul").on("click","li",function(){
+					alert("啊哈哈");
+				})
+			//1.事件解绑off()
+			//$("div").off();//解除div身上所有事件
+			//$("div").off("click");//解除div身上点击事件
+			//解除事件委托ul下的li
+			//$("ul").off("click","li");
+			//2.one()但是它只能触发一次事件
+			$("p").one("click",function(){
+				alert("噗！");
+			});
+			});
+		</script>
+		
+	</body>
+</html>

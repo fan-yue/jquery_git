@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+		<style>
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div></div>
+		<script>
+			$(function(){//给document做点击事件
+				$(document).on("click",function(){
+					console.log("点击了");
+				})
+				//点击事件 就会有事件对象产生  event事件对象
+			$("div").on("click",function(event){
+				//console.log(event);
+				console.log("点击了div");
+			//event.stopPropagation();//阻止冒泡
+			})
+			})
+		</script>
+	</body>
+</html>

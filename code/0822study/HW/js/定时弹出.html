@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../img/min.js"></script>
+	</head>
+		<script>
+			//显示广告
+			function show(){
+				//$("#img1").show();//显示图片,或者用slideDown
+				$("#img1").slideDown(2000);
+				setTimeout("hide()",3000);//显示3秒后，隐藏图片
+				
+			}
+			function hide(){
+				//$("#img1").hide(); //隐藏图片 或者用slideUp
+				$("#img1").slideUp(2000);
+			}
+				
+			$(function(){
+				setTimeout("show()",2000);//打开网页过2秒后，显示图片
+			});		
+		</script>	
+	</head>
+	<body>
+		<!--style="display: none;将图片默认隐藏-->
+		<img src="../img/1.jpg" id="img1" width="100px" style="display: none;"/>
+	</body>
+</html>
+

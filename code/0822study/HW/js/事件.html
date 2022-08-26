@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script src="../img/min.js"></script>
+	<style>
+		div{
+		width: 300px;
+		height: 300px;
+		background-color:blueviolet ;	
+		}
+		.king{
+			background-color: #00FFFF;
+		}
+	</style>
+	</head>
+	<body>
+	<div></div>
+	<ul>
+		<li>金科教育</li>
+		<li>金科教育</li>
+		<li>金科教育</li>
+		<li>金科教育</li>
+	</ul>
+	<ol>
+	</ol>
+	<script>
+		$(function(){
+			/*//1.单个事件注册
+			$("div").click(function(){
+				$(this).css("background","red");
+			});
+			$("div").mouseenter(function(){//鼠标经过
+				$(this).css("background","yellow");
+			});*/
+			//2.事件处理on
+			/*$("div").on({*/
+			/*	click:function(){
+					$(this).css("background","yellow");
+				},
+				mouseenter:function(){
+					$(this).css("background","red");
+				},
+				mouseleave:function(){
+					$(this).css("background","pink");
+				}
+			})*/
+			/*$("div").on("mouseenter mouseleave",function(){
+				$(this).toggleClass("king");
+			})*/
+			//2.on可以实现事件委托
+			//$("ul li").click();//利用隐式迭代给每个小li都赋值
+			//事件是绑定在ul上 但是事件触发是ui下li，只有点li才会触发
+			/*$("ul").on("click","li",function(){
+				alert("好");
+			})*/
+			//3.on可以给未来动态创建的元素绑定事件,
+			//先创建一个<ol></ol>里面没有li 后续追加li
+			/*$("ol li").click(function(){
+				alert(niha);
+			})*/
+			 var li=$("<li>后边来的</li>");
+			 $("ol").append(li);//append追加*/
+			//利用on来操作上边效果
+			$("ol").on("click","li",function(){
+				alert("nihao");
+			})
+			var li=$("<li>我是后边的</li>");
+			$("ol").append(li);
+		});
+		
+	</script>
+	
+	</body>
+</html>

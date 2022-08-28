@@ -273,57 +273,59 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 
 <hr>
+
 ## 简单过滤选择器
 
-### :first或者first()
+
+### `:first或者first()`
 
 ​	选择第一个元素
 
 
 
-### :last获last()
+### `:last获last()`
 
 ​	选择最后一个元素
 
 
 
-### :not(selector)
+### `:not(selector)`
 
 ​	选择除了这个**selector**之外的元素
 
 
 
-### :even
-
-​	选择偶数元素
-
-
-
-### :odd
+### `:even或者even()`
 
 ​	选择奇数元素
 
 
 
-### :eq(index)
+### `:odd或者odd()`
+
+​	选择偶数元素
+
+
+
+### `:eq(index)`
 
 ​	选择第n个元素
 
 
 
-### :gt(index)
+### `:gt(index)`
 
 ​	选择大于第n个后的元素，不包含n，按照下标走。
 
 
 
-### :lt(index)
+### `:lt(index)`
 
 ​	小于第n个后的元素，不包含n，按照下标走。
 
 
 
-### :header
+### `:header`
 
 ​	选择h1~h6所有标题元素
 
@@ -335,25 +337,25 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 ## 内容过滤选择器
 
-### :contains(text)
+### `:contains(text)`
 
 ​	选择获取包含指定文本内容的元素
 
 
 
-### :empty
+### `:empty`
 
 ​	选择获取不包含子元素或文本内容的元素
 
 
 
-### :parent
+### `:parent`
 
 ​	选择获取含有子元素或文本的元素
 
 
 
-### :has(selector)
+### `:has(selector)`
 
 ​	选择获取含有选择器所匹配的元素
 
@@ -363,15 +365,74 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 ## 可见性过滤器
 
-### :hidden
+### `:hidden`
 
 ​	选择display:none或者隐藏文本域（hidden）的元素
 
 
 
-### :visible
+### `:visible`
 
 ​	选择display:block的元素
+
+<hr>
+
+## 表单过滤选择器
+
+### `:input`
+
+选择所有的的`input`标签
+
+### `:button`
+
+选择`input`标签中`type`值为`button`类型的
+
+### `:submit`
+
+选择`input`标签中`type`值为`submit`类型的
+
+### `:text`
+
+选择`input`标签中`type`值为`text`类型的
+
+### `:password`
+
+选择`input`标签中`type`值为`password`类型的
+
+<hr>
+
+**代码实列：**
+
+```
+    <form action="">
+        <input type="text">
+        <br>
+        <input type="password" name="" id="">
+        <br>
+        <input type="button" value="">
+        <br>
+        <input type="submit" value="">
+        <br>
+        <button>按钮</button>
+    </form>
+
+    <script>
+        // :input
+        $(':input').css('color','red');
+
+        // :button
+        // $(':button').val('测试');
+        
+        // :submit
+        // $(':submit').val('哈哈');
+
+        // :text
+        // $(':text').val('text文本测试');
+
+        // :password
+        // $(':password').val('密码框');
+    </script>
+```
 
 
 
@@ -399,7 +460,120 @@ jQuery 中所有选择器都以美元符号开头：**$()**。
 
 
 
+# DOM操作
 
+### 属性操作
+
+#### 获取属性值
+
+​      `attr(属性名）`
+
+#### 设置属性
+
+​      attr(属性名，属性值）
+
+#### 删除属性
+
+​      `removeAttr(属性名）`
+
+
+
+```
+    <!-- 
+    属性操作
+        获取属性值
+            attr(属性名）
+        设置属性
+            attr(属性名，属性值）
+        删除属性
+            removeAttr(属性名）
+     -->
+
+    <img src="./images/1.jpg" alt="logo1">
+    <img src="./images/01.jpg" alt="logo2">
+
+    <script>
+        // 获取属性值,attr(属性名）
+        /* var one = $('img').eq(0).attr('src');
+        console.log(one); */
+        
+        // 设置属性,attr(属性名，属性值）
+        // $('img').eq(0).attr('src','./images/01.jpg');
+
+        // 删除属性,removeAttr(属性名）
+        // $('img').eq(0).removeAttr('src');
+    </script>
+```
+
+
+
+<hr>
+
+### 文本内容操作
+
+#### 获取文本及表单组件内容
+
+##### 	`html（）`
+
+​		可以操作标签
+
+##### 	`text（）`
+
+​		只能操作文本内容，不操作标签
+
+##### 	`val（）`
+
+​		只能用于表单组件
+
+<hr>
+
+#### 设置（修改）文本及表单组件内容
+
+##### 	`html（内容）`
+
+##### 	`text（内容)`
+
+##### 	`val（内容）`
+
+<hr>
+
+#### 删除文本及表单组件内容
+
+##### `html（‘’）`
+
+##### `text（‘’）`
+
+##### `val（‘’）`
+
+
+
+```
+    <p>
+        <a href="#">
+            <span>这是内容</span>
+        </a>
+    </p>
+    <input type="text" value="文本表单组件">
+
+     <script>
+        //  获取文本及表单组件内容
+        // var one = $('p').html();
+        // var one = $('p').text();
+        // var one = $('input').val();
+        // console.log(one);
+
+        // 设置（修改）文本及表单组件内容
+        // $('p').html('<b>加粗内容</b>');
+        // $('p').text('<b>加粗内容</b>');
+        // $('input').val('12312')
+
+        // 删除文本及表单组件内容
+            // p标签存在，但是文本内容没有了
+        // $('p').html('');
+        // $('p').text('');
+        // $(':text').val('');
+     </script>
+```
 
 
 
@@ -570,6 +744,3 @@ $("input").blur(function(){
 });
 ```
 
-
-
-### 

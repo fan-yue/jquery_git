@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-08-28 17:00
+
+    删除DOM节点
+        remove（）
+        remove（dom节点）
+        empty（）
+    -->
+
+    <div class="box2">
+        <p>测试用的</p>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+    <div class="box2" title="a">
+        <p>测试用的</p>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+
+    <script>
+        // remove（）删除节点，所有东西全部移除
+        // $('.box2').remove();
+        // empty（）,只清除相关元素的内部内容
+        // $('.box2').empty();
+        // remove（dom节点），删除有相关属性的元素
+        $('.box2').remove('[title]');
+    </script>
+
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-08-28 16:48
+    
+    复制DOM节点
+            clone（）
+            clone（true）
+    -->
+
+    <!-- <div class="box2">
+        <p>测试用的</p>
+    </div>
+
+    <script>
+        $('p').click(function(){
+            alert('测试');
+        })
+        // 克隆对应的节点
+        var one = $('p').clone(true);
+        // 添加到对应的位置
+        $('.box2').append(one);
+    </script> -->
+
+
+
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-08-28 16:40
+
+    在外部添加DOM节点
+        before（）
+        insertBefore（）
+        after（）
+        insertAfter（）
+    -->
+
+    <!-- <div class="box1">
+        <p>测试用的</p>
+    </div> -->
+    <hr>
+    
+
+    <script>
+        // 创建DOM节点,$(DOM节点内容）
+        var dom1 = $('<p><span>这是使用jQuery添加的内容</span></p>');
+        // before（）
+        // $('.box1').before(dom1);
+        // insertBefore（）
+        // $(dom1).insertBefore($('.box1'));
+        // after（）
+        // $('.box1').after(dom1);
+        // insertAfter（）
+        // $(dom1).insertAfter($('.box1'));
+    </script>
+
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-08-28 16:24
+
+    创建DOM节点
+        $(DOM节点内容）
+    在内容添加DOM节点
+        append（）
+        appenTo（）
+        prepend（）
+        prependTo（）
+
+    -->
+   <!--  <div class="box">
+        <p>测试用的</p>
+    </div> -->
+
+    <script>
+        // 创建DOM节点,$(DOM节点内容）
+        var dom = $('<p><span>这是使用jQuery添加的内容</span></p>');
+        // append（）
+        // $('.box').append(dom);
+        // appenTo（）
+        // $(dom).appendTo($('.box'));
+        // prepend（）
+        // $('.box').prepend(dom);
+        // prependTo（）
+        // $(dom).prependTo($('.box'));
+    </script>
+</body>
+</html>

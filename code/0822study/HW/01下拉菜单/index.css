@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box a{
+    text-decoration: none;
+    color: #73555d;
+}
+.box li{
+    list-style: none;
+}
+.nav{
+    float: left;
+}
+.nav > a{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.nav > a:hover{
+    background-color: #eceeeb;
+}
+.nav li{
+    list-style: none;
+}
+.re{
+    display: none;
+}
+.re li> a{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border:1px solid #f6d492;
+    border-top: none;
+    box-sizing: border-box;
+}

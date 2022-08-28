@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>0</p>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+
+    <script>
+        /*
+            :gt(index)
+            选择大于第n个后的元素，不包含n，按照下标走 
+         */
+
+        $('p:lt(2)').css('color','red');
+    </script>
+
+    <script>
+        /*
+        :eq(index) 或者eq(index)
+            选择第n个元素，n对应就是index，他是下标（索引值）         
+         */
+        // 这是第一个 :eq(index) 显示方式
+        // $('p:eq(3)').css('color','red');
+        // 这是第二个 eq(index) 显示方式
+        // $('p').eq(3).css('color','red');
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="box">
+        <ul  class="xl">
+            <li class="nav">
+                <a href="#">微博</a>
+                <ul class="re" >
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav">
+                <a href="#">微博</a>
+                <ul class="re">
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav">
+                <a href="#">微博</a>
+                <ul class="re">
+                    <li>
+                        <a href="#">私信</a>
+                    </li>
+                    <li>
+                        <a href="#">评论</a>
+                    </li>
+                    <li>
+                        <a href="#">@我</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // 当鼠标经过时
+        $('.xl > li').mouseover(function(){
+            // console.log('测试');
+            $(this).children('ul').show();
+        })
+        $('.xl > li').mouseout(function(){
+            $(this).children('ul').hide();
+        })
+    </script>
+</body>
+</html>

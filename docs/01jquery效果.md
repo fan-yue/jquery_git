@@ -29,7 +29,7 @@ $(selector).hide(speed,callback);
 $(selector).show(speed,callback);
 ```
 
-可选的 `speed` 参数规定隐藏/显示的速度，可以取以下值："`slow`"、"fast" 或毫秒。
+可选的 `speed` 参数规定隐藏/显示的速度，可以取以下值："`slow`"、"`fast`" 或`毫秒`。
 
 可选的 `callback` 参数是隐藏或显示完成后所执行的函数名称。
 

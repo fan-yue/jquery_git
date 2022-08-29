@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        .a{
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">淡入已隐藏的元素</button>
+    <button id="btn1">淡出可见元素</button>
+    <div class="a" style="display: none;"> 
+        123123
+    </div>
+
+    <script>
+        $('#btn').click(function(){
+            $('.a').fadeIn(1000,function(){
+                // alert('出来了')
+            });
+        })
+
+        $('#btn1').click(function(){
+            $('.a').fadeOut(1000);
+        })
+    </script>
+</body>
+</html>

@@ -114,7 +114,7 @@
 
 ## jQuery 遍历 - 同胞(siblings)
 
-### siblings(selector)	被选元素的所有同胞元素
+### siblings(selector)	被选元素的所有同胞元素，不算自己
 
 ```
     <ul>

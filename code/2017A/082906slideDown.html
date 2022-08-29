@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        .a{
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <div class="a" style="display: none;">
+        123123
+    </div>
+    <script>
+        $('button').eq(0).click(function(){
+            $('.a').slideDown(1000);
+        })
+        $('button').eq(1).click(function(){
+            $('.a').slideUp(1000);
+        })
+    </script>
+</body>
+</html>

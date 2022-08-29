@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        #a{
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-08-29 09:01
+
+    hide(),show()
+
+    -->
+    <button id="one">隐藏</button>
+    <button id="two">显示</button>
+    <div id="a">
+        123
+    </div>
+
+    <script>
+        $('#one').click(function(){
+            $('#a').hide(1000,function(){
+                alert('.....');
+            });
+        })
+        $('#two').click(function(){
+            $('#a').show(1000,function(){
+                alert('123123312');
+            });
+        })
+    </script>
+</body>
+</html>

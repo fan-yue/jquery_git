@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./083001.css">
+</head>
+<body>
+    <div class="warpper">
+        <ul id="left">
+            <li><a href="#">女靴</a></li>
+            <li><a href="#">雪地靴</a></li>
+            <li><a href="#">冬裙</a></li>
+            <li><a href="#">大衣</a></li>
+            <li><a href="#">毛衣</a></li>
+            <li><a href="#">棉服</a></li>
+            <li><a href="#">女裤</a></li>
+            <li><a href="#">羽绒服</a></li>
+        </ul>
+        <div class="content">
+            <div>
+                <a href="#">
+                    <img src="./01.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./2.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./02.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./01.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./2.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./02.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./01.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./2.jpg" alt="" width="400" height="500">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#left li').mouseenter(function(){
+            var index = $(this).index();
+            $('.content div').eq(index).show();
+            $('.content div').eq(index).siblings().hide();
+        })
+    </script>
+</body>
+</html>

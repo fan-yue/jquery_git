@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.warpper{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #edd1d3;
+}
+/* 左边的菜单 */
+.warpper #left >li{
+    list-style: none;
+}
+.warpper #left{
+    float: left;
+}
+.warpper #left a{
+    display: block;
+    width: 80px;
+    height: 60px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid #edd1d3;
+    border-top: none;
+}
+.warpper #left a:hover{
+    background-color: red;
+    color: white;
+}
+
+/* 图片 */
+.warpper .content{
+    float: left;
+    position: relative;
+}
+.warpper .content > div{
+    position: absolute;
+    
+}

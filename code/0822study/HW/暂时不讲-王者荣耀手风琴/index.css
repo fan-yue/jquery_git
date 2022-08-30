@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.king{
+    width: 800px;
+    height: 100px;
+    background: url("./images/背景.png");
+}
+.king .active{
+    width: 224px;
+}
+.king li{
+    float: left;
+    display: inline;
+    position: relative;
+    margin-right: 10px;
+}
+.king .small{
+    width: 69px;
+    height: 69px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.king .big{
+    width: 224px;
+    height: 69px;
+}

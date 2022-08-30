@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.xl li{
+    list-style: none;
+}
+.xl li a{
+    text-decoration:none;
+    color: black;
+}
+.nav {
+    float: left;
+}
+.nav > a{
+    width: 100px;
+    height: 40px; 
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+}
+.nav > a:hover{
+    background-color: #eceeeb;
+}
+.re{
+    display: none;
+}
+.re li> a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #f6d492;
+    border-top: none;
+    text-align: center;
+    line-height: 40px;
+}

@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.tab_list{
+    border: 1px solid black;
+    width: 1150px;
+    height: 50px;
+    background-color: #eef0ee;
+}
+.tab_list  li{
+    float: left;
+    list-style: none;
+    padding:0 20px 0 20px;
+    line-height: 50px;
+    box-sizing: border-box;
+}
+.current{
+    background-color: #d7271e;
+    color: white;
+}
+/* tab_con */
+.tab_con{
+    width: 1150px;
+    border: 1px solid black;
+}
+.tab_con .item{
+    display: none;
+}

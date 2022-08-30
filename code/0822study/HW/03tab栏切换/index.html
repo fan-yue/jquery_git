@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价(5000)</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                <p>商品介绍模块内容</p>
+                <p>商品介绍模块内容</p>
+                <p>商品介绍模块内容</p>
+                <p>商品介绍模块内容</p>
+            </div>
+            <div class="item">
+                <p>规格与包装模块内容</p>
+                <p>规格与包装模块内容</p>
+                <p>规格与包装模块内容</p>
+            </div>
+            <div class="item">
+                <p>售后保障模块内容</p>
+                <p>售后保障模块内容</p>
+                <p>售后保障模块内容</p>
+            </div>
+            <div class="item">
+                <p>商品评价(5000)模块内容</p>
+                <p>商品评价(5000)模块内容</p>
+                <p>商品评价(5000)模块内容</p>
+            </div>
+            <div class="item">
+                <p>手机社区模块内容</p>
+                <p>手机社区模块内容</p>
+                <p>手机社区模块内容</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('li').click(function(){
+            $(this).addClass('current').siblings().removeClass('current');
+            var index = $(this).index();
+            $('.item').eq(index).show().siblings().hide();
+        })
+    </script>
+</body>
+</html>

@@ -46,10 +46,10 @@
 
     <script>
         $('.xl > li').mouseenter(function(){
-            $(this).children('ul').show();
+            $(this).children('ul').stop().slideDown();
         })
         $(".xl > li").mouseleave(function(){
-            $(this).children('ul').hide();
+            $(this).children('ul').stop().slideUp();
         })
     </script>
 </body>

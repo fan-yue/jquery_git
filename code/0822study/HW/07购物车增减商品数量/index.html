@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .che input{
+            margin: 10px;
+        }
+        .che img{
+            width: 300px;
+            height: 200px;
+        }
+        .che .add a{
+            text-decoration: none;
+            display: inline-block;
+            width: 10px;
+            border: 1px solid black;
+            padding: 0 5px;
+        }
+        .che .add input{
+            width: 15px;
+            padding:  0 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="che">
+        <table border="1">
+            <tr align="center">
+                <td></td>
+                <td>商品图片</td>
+                <td>商品数量</td>
+                <td>商品价格</td>
+                <td>商品总价</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="che-shop">
+                </td>
+                <td>
+                    <img src="./大1.jpg" alt="">
+                </td>
+                <td class="add">
+                    <a href="#" class="addy">-</a>
+                    <input type="text" value="1" class="atext">
+                    <a href="#" class="addj">+</a>
+                </td>
+                <td class="pr">
+                    <p>
+                        ￥<span class="price">12.0</span>
+                    </p>
+                </td>
+                <td class="sum">
+                    <p>
+                        ￥<span class="priceSum">12.0</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="che-shop">
+                </td>
+                <td>
+                    <img src="./大2.jpg" alt="">
+                </td>
+                <td class="add">
+                    <a href="#" class="addy">-</a>
+                    <input type="text" value="1" class="atext">
+                    <a href="#" class="addj">+</a>
+                </td>
+                <td class="pr">
+                    <p>
+                        ￥<span class="price">6.0</span>
+                    </p>
+                </td>
+                <td class="sum">
+                    <p>
+                        ￥<span class="priceSum">6.0</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="che-shop">
+                </td>
+                <td>
+                    <img src="./大3.jpg" alt="">
+                </td>
+                <td class="add">
+                    <a href="#" class="addy">-</a>
+                    <input type="text" value="1" class="atext">
+                    <a href="#" class="addj">+</a>
+                </td>
+                <td class="pr">
+                    <p>
+                        ￥<span class="price">3.0</span>
+                    </p>
+                </td>
+                <td class="sum">
+                    <p>
+                        ￥<span class="priceSum">3.0</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="che-shop">
+                </td>
+                <td>
+                    <img src="./大3.jpg" alt="">
+                </td>
+                <td class="add">
+                    <a href="#" class="addy">-</a>
+                    <input type="text" value="1" class="atext">
+                    <a href="#" class="addj">+</a>
+                </td>
+                <td class="pr">
+                    <p>
+                        ￥<span class="price">1.5</span>
+                    </p>
+                </td>
+                <td class="sum">
+                    <p>
+                        ￥<span class="priceSum">1.5</span>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" id="" class="btn">全选 
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <p>1111</p>
+        
+    </div>
+    <script>
+        // 创建节点，$(DOM节点内容)
+        var dom = $('<p><span>测试</span></p>');
+        // append(),将创建的 DOM 节点放入所添加的元素里面
+        // $('.box').before(dom);
+        // appendTo(),后置类型，写法不同
+        // $(dom).insertBefore($('.box'));
+        // prepend(),将创建的 DOM 节点，放入所添加元素的前面
+        // $('.box').after(dom);
+        // prependTo(),后置类型，写法不同
+        // $(dom).insertAfter($('.box'));
+    </script>
+</body>
+</html>

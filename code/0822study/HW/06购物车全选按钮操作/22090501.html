@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="" class="che-shop">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="" class="che-shop">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="" class="che-shop">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="" id="" class="che-shop">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" class="btn">全选
+            </td>
+        </tr>
+    </table>
+    <script>
+        $('.btn').click(function(){
+            // $(this).prop('checked');
+            $('.che-shop').prop('checked',$(this).prop('checked'));
+        })
+
+        $('.che-shop').click(function(){
+            if($('.che-shop:checked').length == $('.che-shop').length){
+                $('.btn').prop('checked',true);
+            }else{
+                $('.btn').prop('checked',false);
+            }
+        })
+    </script>
+</body>
+</html>

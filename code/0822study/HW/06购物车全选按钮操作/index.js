@@ -16,7 +16,7 @@ $(".che-shop").click(function(){
         全选按钮不被选中
     } 
     */
-    if($('.che-shop:checked').length == 3){
+    if($('.che-shop:checked').length == 4){
         $('.btn').prop('checked',true);
     }else{
         $('.btn').prop('checked',false);

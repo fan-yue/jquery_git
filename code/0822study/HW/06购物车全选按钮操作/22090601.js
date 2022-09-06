@@ -19,8 +19,6 @@ $('.addj').click(function(){
     // 商品价格计算
     var b = $('.price').text();
     $('.zj').text( a * b );
-
-
 })
 
 // 购物车 - 功能

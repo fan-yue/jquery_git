@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    
+    <script>
+        /* var arr = ['red','green','blue'];
+        $.each(arr,function(i,el){
+            console.log(i);
+            console.log(el);
+        }) */
+
+        var obj = {
+            name:'路人甲',
+            age:18,
+            sex:'男'
+        }
+        $.each(obj,function(i,el){
+            console.log(i,el);
+        })
+    </script>
+
+
+
+
+    <!-- <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    
+    <script>
+
+        var sum = 0;
+        
+        $('div').each(function(i,el){
+            var one = $(el).text();
+            // sum = sum + parseInt($(el).text());
+            sum += parseInt($(el).text());
+        })
+        console.log(sum);
+        /* var arr = ['red','green','blue'];
+        $('div').each(function(i,el){
+            $(el).css('color',arr[i]);
+        }) */
+    </script> -->
+</body>
+</html>

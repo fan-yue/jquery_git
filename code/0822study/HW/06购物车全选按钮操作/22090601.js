@@ -21,7 +21,7 @@ $('.addj').click(function(){
 
     $(this).parent().parent().siblings('.priceSum').find('.zj').text( price * a);
 
-    
+    getSum();
     
 })
 
@@ -37,6 +37,8 @@ $('.addy').click(function(){
     var price = $(this).parent().parent().siblings('.pr').find('.price').text();
 
     $(this).parent().parent().siblings('.priceSum').find('.zj').text( price * a);
+
+    getSum();
 })  
 
 $('.atext').change(function(){  
@@ -47,4 +49,36 @@ $('.atext').change(function(){
 
     // 总价
     $(this).parents().siblings('.priceSum').find('.zj').text( a * price);
+})
+
+
+
+
+
+
+function getSum(){
+    var count = 0;
+    $('.atext').each(function(i,el){
+        // count = count + $(el).val();
+        count += parseInt($(el).val());
+        
+    })
+    
+    $('.list-sum').text(count);
+    
+
+    var money = 0;
+    $('.zj').each(function(i,el){
+        // money = money + parseInt($(el).text());
+        money += parseInt($(el).text());
+    })
+    $('.prcie-list-sum').text(money);
+}
+
+getSum();
+
+// 删除商品
+$('.delA').click(function(){
+    $(this).parent().parent().remove();
+    getSum();
 })

@@ -19,6 +19,12 @@
             display: inline-block;
             padding: 0 10px;
         }
+        .list-sum{
+            color: red;
+        }
+        .prcie-list-sum{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +36,7 @@
                 <th>数量</th>
                 <th>单价</th>
                 <th>总价</th>
+                <th>删除商品</th>
             </tr>
             <!-- 第一行 -->
             <tr>
@@ -55,8 +62,11 @@
                 <td class="priceSum">
                     <p>
                         ￥
-                        <span class="zj">12.0</span>
+                        <span class="zj">12.3</span>
                     </p>
+                </td>
+                <td align="center">
+                    <a href="#" class="delA">删除</a>
                 </td>
             </tr>
             <!-- 第二行 -->
@@ -74,7 +84,7 @@
                         <a href="#" class="addj">+</a>
                     </p>
                 </td>
-                 <td class="pr">
+                <td class="pr">
                     <p>
                         ￥
                         <span class="price">10</span>
@@ -83,8 +93,11 @@
                 <td class="priceSum">
                     <p>
                         ￥
-                        <span class="zj">12.0</span>
+                        <span class="zj">10</span>
                     </p>
+                </td>
+                <td align="center">
+                    <a href="#" class="delA">删除</a>
                 </td>
             </tr>
             <!-- 第三行 -->
@@ -102,26 +115,33 @@
                         <a href="#" class="addj">+</a>
                     </p>
                 </td>
-            </tr>
-            <!-- 第四行 -->
-            <tr>
-                <td>
-                    <input type="checkbox" name="" id="" class="che-shop">
-                </td>
-                <td>
-                    <img src="./大4.jpg" alt="">
-                </td>
-                <td class="add">
+                <td class="pr">
                     <p>
-                        <a href="#" class="addy">-</a>
-                        <input type="text" value="1" class="atext">
-                        <a href="#" class="addj">+</a>
+                        ￥
+                        <span class="price">10</span>
                     </p>
+                </td>
+                <td class="priceSum">
+                    <p>
+                        ￥
+                        <span class="zj">10</span>
+                    </p>
+                </td>
+                <td align="center">
+                    <a href="#" class="delA">删除</a>
                 </td>
             </tr>
             <tr>
                 <td>
                     <input type="checkbox" class="btn">全选
+                </td>
+                <td></td>
+                <td>
+                    总数量<span class="list-sum">0</span>件
+                </td>
+                <td></td>
+                <td>
+                    总价<span class="prcie-list-sum">0</span>元
                 </td>
             </tr>
         </table>

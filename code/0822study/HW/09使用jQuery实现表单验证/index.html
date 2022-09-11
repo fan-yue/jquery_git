@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2022-09-11 21:36
+    -->
+
+    <form action="">
+        <label for="">
+            账号：<input type="text" value="">
+            <span class="tip">请输入正确的格式</span>
+        </label>
+    </form>
+
+    <script>
+        // 正则匹配
+        var zhegnze = /123/g;
+        // 账号验证
+        $('input').change(function(){
+            if(zhegnze.test($(this).val())){
+                $('.tip').html('<span>通过</span>');
+            }else{
+                $('.tip').html('<span>不通过</span>');
+            }
+        })
+    </script>
+</body>
+</html>

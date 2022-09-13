@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>image.png
+<body>
+    <div>123</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    
+    <script>
+        $('div').on({
+            click : function(){
+                console.log($(this));
+            },
+            mouseover : function(){
+                $(this).css('color','red');
+            }
+        })
+        
+        $('ul').on('click','li',function(){
+            console.log('this is li标签');
+        })
+
+        // 解绑事件off()用法
+        $('div').off();         //解绑div身上所有的事件
+        $('div').off('click');  //只解绑div身上对应的点击事件
+        $('ul').off('click','li');  //解绑通过事件委托的事件
+    </script>
+</body>
+</html>

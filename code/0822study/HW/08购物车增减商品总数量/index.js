@@ -96,7 +96,7 @@ function getSum(){
     $('.price-sum').text(money);
 }
 
-// 外置函数，先行调用一次。
+// 外置函数，先行W调用一次。
 getSum();
 
 // 商品删除模块

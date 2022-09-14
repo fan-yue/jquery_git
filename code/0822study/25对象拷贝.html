@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <script>
+        /* var obj = {};
+        var obja = {
+            id:1,
+            name:'lurenjia'
+        };
+
+        $.extend(obj,obja);
+        console.log(obj); */
+
+        /* var obj = {
+            id:0
+        };
+        var obja = {
+            id:1,
+            name:'lurenjia'
+        };
+        $.extend(obj,obja);
+        console.log(obj);   //如果被赋值的值，会覆盖以前的对象里面的数据 */
+
+        // 浅拷贝
+        var obj = {
+            id:0
+        };
+        var obja = {
+            id:1,
+            name:'lurenjia',
+            msg:{
+                height:170
+            }
+        };
+        $.extend(obj,obja);
+        console.log(obj);
+        obja.msg.height = 175;
+        console.log(obj);
+
+        // 深拷贝
+        /* var obj = {
+            id:0,
+            mes:{
+                width:100
+            }
+        };
+        var obja = {
+            id:1,
+            name:'lurenjia',
+            msg:{
+                height:170
+            }
+        };
+
+        $.extend(true,obj,obja);
+        console.log(obja);
+        console.log(obj); */
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 10px solid black;
+            background-color: aquamarine;
+            padding: 10px;
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+
+    <script>
+        var a = $('div').outerWidth(true);
+        console.log(a);
+    </script>
+
+    <!-- <script>
+        $('div').outerWidth(100)
+        var a = $('div').outerWidth();
+        console.log(a);
+    </script> -->
+
+    <!-- <script>
+        $('div').innerWidth('100');
+        var wi = $('div').innerWidth();
+        console.log(wi);
+    </script> -->
+
+    <!-- <script>
+        var width = $('div').width(100);
+        var he = $('div').height(100);
+        console.log(width,he);
+    </script> -->
+</body>
+</html>

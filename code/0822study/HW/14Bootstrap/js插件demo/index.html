@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <!-- 使用文档给的推荐按钮演示模态框 -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+            ...
+            </div>
+        </div>
+    </div>
+
+    <!-- button标签按钮调用 -->
+        <!-- 第一种，通过data属性调用 -->
+    <button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+
+        <!-- 第二种，通过JavaScript调用 -->
+    <button class="btn">按钮</button>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="test">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.btn').on('click',function(){
+            $('#test').modal();
+        })
+    </script>
+</body>
+</html>

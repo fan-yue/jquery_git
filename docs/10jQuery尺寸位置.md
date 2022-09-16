@@ -135,5 +135,102 @@
 
 
 
+<hr>
+
 ### JQuery位置
 
+位置主要的三个方法：`offset()`、`position()`、`scrollTpo()/scrollLeft()`
+
+
+
+#### `offset()`设置或获取元素偏移
+
+1. `offset()` 方法设置或返回被选元素相对于**文档**的偏移坐标，跟父级无关。
+2. 该方法有2个属性，`left`、`top`。
+    - `offset().top`用于获取距离文档顶部的距离
+    - `offset().left`用于获取距离文档左侧的距离
+3. 可以通过设置元素的偏移：`offset({top:10,left:30})`
+
+```html
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    <script>
+        // 获取
+        var off = $('.son').offset();
+        console.log(off);
+        // 设置
+        var offset = $('.son').offset({
+            top:50,
+            left:50
+        })
+    </script>
+```
+
+
+
+<hr>
+
+
+
+#### `position()`获取元素偏移
+
+1. `position()`方法用于返回被选元素相对于`带有定位的父级`偏移坐标，如果父级未设置定位，则以文档为准。
+
+```html
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+
+        </div>
+    </div>
+    
+    <script>
+        var fix = $('.son').position();
+        console.log(fix);
+    </script>
+```
+
+
+
+<hr>
+
+
+
+#### `scrollTpo()/scrollLeft()`设置或获取元素被卷去的头部和左侧
+
+1. `scrollTpo()`方法设置或返回被选元素被卷去的头部
+2. 

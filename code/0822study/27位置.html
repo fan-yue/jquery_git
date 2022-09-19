@@ -7,9 +7,14 @@
     <title>Document</title>
     <script src="./jquery-3.6.0.min.js"></script>
     <style>
+        *{
+            margin: 0 auto;
+        }
         .box{
             width: 400px;
-            height: 1000px;
+            height: 2000px;
+            background-color: darkturquoise;
+            margin: 200px auto;
         }
     </style>
 </head>
@@ -19,7 +24,8 @@
     </div>
 
     <script>
-
+        var a = $('.box').scrollLeft();
+        console.log(a);
     </script>
     
     

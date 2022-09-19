@@ -232,5 +232,50 @@
 
 #### `scrollTpo()/scrollLeft()`设置或获取元素被卷去的头部和左侧
 
-1. `scrollTpo()`方法设置或返回被选元素被卷去的头部
-2. 
+1. `scrollTpo()`方法设**置或返回**被选元素被卷去的**头部**。
+
+   1. 获取括号内为**空**
+   2. 设置括号内为**数值**
+
+   ```html
+       <style>
+           *{
+               margin: 0 auto;
+           }
+           .box{
+               width: 400px;
+               height: 2000px;
+               background-color: darkturquoise;
+               margin: 200px auto;
+           }
+       </style>
+   </head>
+   <body>
+       <div class="box">
+   
+       </div>
+   
+       <script>
+           $(window).scroll(function(){
+               var a = $(document).scrollTop();
+               console.log(a);
+           })
+       </script>
+   ```
+
+   
+
+   例子：当页面到对应位置，让隐藏div显示
+
+   ```
+   
+   ```
+
+   
+
+2. `scrollLeft()`方法设**置或返回**被选元素被卷去的**左侧**。
+
+   
+
+   
+

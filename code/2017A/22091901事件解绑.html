@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        $('div').on({
+            click : function(){
+                console.log(123123);
+            },
+            mouseleave : function(){
+                $(this).css('color','red')
+            },
+            mouseenter : function(){
+                console.log(0000);
+            }
+        })
+
+        $('ul').on('click','li',function(){
+            console.log(1232);
+        })
+        // $('div').off();
+        // $('div').off('click');
+        $('ul').off('click','li');
+    </script>
+</body>
+</html>

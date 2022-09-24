@@ -75,7 +75,12 @@
             }
 
             // 当鼠标到达某一个页面时，左下模块会自动添加 加重 样式
-            $('.flex').
+            $('.flex').each(function(i,el){
+                if($(document).scrollTop() >= $(el).offset().top){
+                    // console.log(i);
+                    $('.re').eq(i).addClass('only').siblings().removeClass('only');
+                }
+            })
 
         })
 

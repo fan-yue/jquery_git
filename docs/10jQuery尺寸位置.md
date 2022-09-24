@@ -3,11 +3,11 @@
 | 语法                                   | 用法                                                    |
 | -------------------------------------- | ------------------------------------------------------- |
 | `width()`/`height()`                   | 获取、设置元素宽度和高度值。只算`width`/`height`        |
-| `innerWidth()`/`innerHeight()`         | 获取元素宽度和高度值。包含 `padding`                    |
-| `outerWidht()`/`outerHeight()`         | 获取元素宽度和高度值 。包含`padding`、`border`          |
+| `innerWidth()`/`innerHeight()`         | 获取、设置元素宽度和高度值。包含 `padding`              |
+| `outerWidth()`/`outerHeight()`         | 获取元素宽度和高度值 。包含`padding`、`border`          |
 | `outerWidth(true)`/`outerHeight(true)` | 获取元素宽度和高度值。包含`padding`、`border`、`margin` |
 
-- 以上参数为空，是获取，返回的数值类型
+- 以上参数为空，是获取，返回的数值类型。
 - 参数为数字，则是修改相对应的值。
 
 
@@ -50,7 +50,7 @@
 
 #### `innerWidth()`/`innerHeight()`
 
-​	获取元素宽度和高度值。包含 `padding`
+​	获取、设置元素宽度和高度值。包含 `padding`
 
 ​	**代码片段**
 
@@ -79,9 +79,9 @@
 
 <hr>
 
-#### `outerWidht()`/`outerHeight()`
+#### `outerWidth()`/`outerHeight()`
 
-​	获取元素宽度和高度值 。包含`padding`、`border`
+​	获取、设置元素宽度和高度值 。包含`padding`、`border`
 
 ```html
     <style>
@@ -234,8 +234,8 @@
 
 1. `scrollTpo()`方法设**置或返回**被选元素被卷去的**头部**。
 
-   1. 获取括号内为**空**
-   2. 设置括号内为**数值**
+   1. 获取括号内为**空**。
+   2. 设置括号内为**数值**。
 
    ```html
        <style>

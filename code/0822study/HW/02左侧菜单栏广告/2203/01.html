@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./01.css">
+</head>
+<body>
+    <div class="warpper">
+        <!-- 左边 -->
+        <ul class="left">
+            <li>
+                <a href="#">A</a>
+            </li>
+            <li>
+                <a href="#">B</a>
+            </li>
+            <li>
+                <a href="#">C</a>
+            </li>
+            <li>
+                <a href="#">D</a>
+            </li><li>
+                <a href="#">E</a>
+            </li>
+            <li>
+                <a href="#">F</a>
+            </li>
+            <li>
+                <a href="#">G</a>
+            </li>
+            <li>
+                <a href="#">X</a>
+            </li>
+        </ul>
+        <!-- 右边 -->
+        <div class="right">
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-08-50.png" alt="">
+                </a>
+            </div>
+            
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-09-53.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-10-24.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-10-39.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-10-55.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-11-15.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-11-34.png" alt="">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="./Snipaste_2023-03-08_15-12-14.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.left li').mouseover(function(){
+            // a的变量, 返回 li 里面的索引的值
+            let a = $(this).index();
+
+            $('.right div').eq(a).siblings().hide();
+
+            $('.right div').eq(a).show();
+            
+        })
+    </script>
+</body>
+</html>

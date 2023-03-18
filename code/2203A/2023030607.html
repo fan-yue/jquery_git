@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- 
+    @MethodAuthor: fan
+    @LastTime:2023-03-06 15:38
+    -->
+    <!-- hide() 和 show() -->
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button>
+    <div class="a">
+        123
+    </div>
+    
+    <script>
+        $('#hide').click(function(){
+            $('.a').hide(1000,function(){
+                alert('123你被捕了');
+            });
+        })
+
+        $('#show').click(function(){
+            $('.a').show(3000);
+        })
+    </script>
+</body>
+</html>

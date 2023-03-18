@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <a href="#" title="标题" data-name="one">超链接</a>
+    <input type="text" value="表单里面的值">
+
+    <script>
+        // attr('属性名称');    获取属性值,包括自定的属性值
+        let a1= $('a').attr('data-name');
+        console.log(a1);
+
+        // attr('属性名称','属性值');     设置属性值,包括自定的属性值
+        $('a').attr('data-name','two');
+
+
+        // prop('属性名称') ，获取属性值（仅限系统自带的属性）
+        let data = $('a').prop('title');
+        console.log(data);
+
+        // prop('属性名称','属性值') ，获取属性值（仅限系统自带的属性）
+        $('a').prop('title','到底是不是个标题啊');
+
+        $('input').removeAttr('value');
+    </script>
+</body>
+</html>

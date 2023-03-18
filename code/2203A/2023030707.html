@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button>按钮</button>
+    <div class="yeye">
+        <div class="father">
+            <p class="son">内容</p>
+        </div>
+    </div>
+
+    <script>
+        $('button').click(function(){
+            let a = $('.son').parents();
+            console.log(a);
+        })
+    </script>
+</body>
+</html>

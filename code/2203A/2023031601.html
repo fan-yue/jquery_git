@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        // 绑定事件
+        $('div').on({
+            click : function(){
+                console.log($(this));
+            },
+            mouseover : function(){
+                $(this).css('color','red');
+            }
+        })
+
+        $('ul').on('click','li',function(){
+            console.log('this is li标签');
+        })
+
+        // 解绑事件
+            //解绑所有事件
+        // $('div').off();
+            // 直解绑括号里面事件
+        // $('div').off('click');
+            // 解绑通过事件委托绑定的事件
+        $('ul').off('click','li');
+    </script>
+</body>
+</html>

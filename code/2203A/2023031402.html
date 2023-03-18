@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul class="box">
+        <li></li>
+        <li>1</li>
+        <li></li>
+    </ul>
+
+
+    <script>
+        // 创建元素
+        let li0 = $('<li>0</li>');
+
+        // before(创建的元素)  ,之前，同级
+        $('.box').before(li0);
+
+        let li4  = $('<li>4</li>');
+        // after(创建的元素)  ,之后，同级
+        $('.box').after(li4);
+    </script>
+</body>
+</html>

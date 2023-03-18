@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        /* css选择器，类选择器（class选择器） */
+        /* .one{
+            color: red;
+        } */
+        /* #a{
+            color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div class="one">123</div>
+    <p id="a">456</p>
+    <span>789</span>
+
+    <script>
+        // 类选择器（class选择器）
+        $('.one').css('color','red');
+
+        // id选择器
+        $('#a').css('color','blue');
+
+        // 标签选择器
+        $('span').css('color','pink');
+
+        // * 通配符，选中网页中所有的标签
+        $('*').css('color','orange')
+    </script>
+</body>
+</html>

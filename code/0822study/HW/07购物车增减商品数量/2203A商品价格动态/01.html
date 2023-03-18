@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./01.css">
+</head>
+<body>
+    <table class="tab" border="1">
+        <tr>
+            <th>选中</th>
+            <th>商品图片</th>
+            <th>商品数量</th>
+            <th>单价</th>
+            <th>总价</th>
+        </tr>
+        <!-- 第一行 -->
+        <tr>
+            <td>
+                <input type="checkbox" class="che-shop" >
+            </td>
+            <td>
+                <img src="./A.png" alt="">
+            </td>
+            <td>
+                <a href="#" class="remove">-</a>
+                <input type="text" value="1" class="val">
+                <a href="#" class="add">+</a>
+            </td>
+            <td class="price">
+                <span>10</span>💴
+            </td>
+            <td class="sum">
+                <span>10</span>💴
+            </td>
+        </tr>
+        <!-- 第二行 -->
+        <tr>
+            <td>
+                <input type="checkbox" class="che-shop">
+            </td>
+            <td>
+                <img src="./B.png" alt="">
+            </td>
+            <td>
+                <a href="#" class="add">-</a>
+                <input type="text" value="1" class="val">
+                <a href="#" class="add">+</a>
+            </td>
+            <td>
+                <span>15</span>💴
+            </td>
+            <td>
+                <span>15</span>💴
+            </td>
+        </tr>
+        <!-- 第三行 -->
+        <tr>
+            <td>
+                <input type="checkbox" class="che-shop">
+            </td>
+            <td>
+                <img src="./C.png" alt="">
+            </td>
+            <td>
+                <a href="#" class="add">-</a>
+                <input type="text" value="1" class="val">
+                <a href="#" class="add">+</a>
+            </td>
+            <td>
+                <span>20</span>💴
+            </td>
+            <td>
+                <span>20</span>💴
+            </td>
+        </tr>
+        <!-- 第四行 -->
+        <tr>
+            <td>
+                <input type="checkbox" class="che-shop">
+            </td>
+            <td>
+                <img src="./D.png" alt="">
+            </td>
+            <td>
+                <a href="#" class="add">-</a>
+                <input type="text" value="1" class="val">
+                <a href="#" class="add">+</a>
+            </td>
+            <td>
+                <span>25</span>💴
+            </td>
+            <td>
+                <span>25</span>💴
+            </td>
+        </tr>
+        <!-- 第五行 -->
+        <tr>
+            <td>
+                <input type="checkbox" id='btn'>全选
+            </td>
+        </tr>
+    </table>
+    <script src="./01.js"></script>
+</body>
+</html>

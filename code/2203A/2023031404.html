@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box2">
+        <p>测试用的</p>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+    <div class="box2" title="a">
+        <p>测试用的</p>
+        <ul>
+            <li>1</li>
+            <li>1</li>
+            <li>1</li>
+        </ul>
+    </div>
+
+    <script>
+        // remove() , 移除当前的DOM及子元素
+        // $('.box2').remove();
+
+        // empty()，只清除相关元素的内部内容
+        // $('.box2').empty();
+
+        // remove(dom节点)，删除有相关属性的元素
+        $('.box2').remove('[title]');
+        // console.log($('.box2'));
+    </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 通过 jQuery，您可以使用 hide() 和 show() 方法来**隐藏和显示** HTML 元素：
 
-```
+```html
     <button id="hide">隐藏</button>
     <button id="show">显示</button>
     <div class="a">
@@ -79,7 +79,7 @@ $(selector).show(speed,callback);
 
 可以使用 `toggle()` 方法来切换 `hide()` 和 `show()` 方法。
 
-显示被隐藏的元素，并隐藏已显示的元素
+显示被隐藏的元素，并隐藏已显示的元素。
 
 `语法`
 
@@ -437,7 +437,7 @@ jQuery 提供针对动画的队列功能，这意味着如果您在彼此之后�
 
 ```
     <button id="btn">集成按钮，可以显示也可以隐藏</button>
-    <div class="a" style="width:200px;position: relative;">
+    <div class="a" style="width:200px;position: relative;background-color: red;">
         123
     </div>
     <script>

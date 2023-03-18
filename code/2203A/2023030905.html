@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>p标签的值</p>
+    <p class="add"></p>
+    
+
+    <script>
+        // text() ,获取标签的文本内容
+        /* let p1 = $('p').text();
+        console.log(p1);
+ */
+        // text('值')，添加文本内容
+        // $('.add').text('下午真困');
+
+
+        // html(),获取标签的文本内容
+        let re = $('p').html();
+        console.log(re);   
+        
+        // html('值')，添加文本内容（可以识别标签）
+        $('.add').html('<b>粗体</b>');
+    </script>
+</body>
+</html>

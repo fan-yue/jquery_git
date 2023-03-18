@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./01.css">
+</head>
+<body>
+    <div class="box">
+        <!-- 顶部菜单 -->
+        <div class="caidan">
+            <ul>
+                <li class="onlyyou">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价(5000)</li>
+            </ul>
+        </div>
+        <!-- 底部内容 -->
+        <div class="dibu">
+            <div class="one">
+                <p>商品介绍模块</p>
+                <p>商品介绍模块</p>
+                <p>商品介绍模块</p>
+                <p>商品介绍模块</p>
+            </div>
+            <div class="no one">
+                <p>规格与包装模块</p>
+                <p>规格与包装模块</p>
+                <p>规格与包装模块</p>
+                <p>规格与包装模块</p>
+            </div>
+            <div class="no one">
+                <p>售后保障模 块</p>
+                <p>售后保障模 块</p>
+                <p>售后保障模 块</p>
+                <p>售后保障模 块</p>
+            </div>
+            <div class="no one">
+                <p>品评价(5000)模块</p>
+                <p>品评价(5000)模块</p>
+                <p>品评价(5000)模块</p>
+                <p>品评价(5000)模块</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('li').click(function(){
+            $(this).addClass('onlyyou').siblings().removeClass('onlyyou');
+            let index = $(this).index();
+            $('.one').eq(index).show().siblings().hide();
+        })
+    </script>
+</body>
+</html>

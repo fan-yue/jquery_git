@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.warpper{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+/* 左边 */
+.warpper .left{
+    float: left;
+}
+.warpper .left a{
+    width: 80px;
+    height: 60px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid #edd1d3;
+    text-align: center;
+    line-height: 60px;
+}
+.warpper .left a:hover{
+    background-color: red;
+    color: white;
+}
+
+
+/* 右边 */
+.warpper .right{
+    width: 400px;
+    float: right;
+    /* 相对定位 */
+    position:relative;
+}
+.warpper .right  > div{
+    /* 绝对定位 */
+    position: absolute;
+}
+.warpper .right  > div img{
+    width: 450px;
+    height: 500px;
+}

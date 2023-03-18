@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="box">
+        <p>测试用的</p>
+    </div>
+    <script>
+        // 创建DOM节点（创建标签及里面内容）
+        let p1 = $('<p>文字</p>');
+
+        // append(创建的节点)  , 放在后面
+        // $('.box').append(p1);
+
+        // 创建的标签.appendTo(父级盒子)
+        // $(p1).appendTo($('.box'));
+
+        // prepend(创建的节点) ， 放在前面
+        $('.box').prepend(p1);
+    </script>
+</body>
+</html>

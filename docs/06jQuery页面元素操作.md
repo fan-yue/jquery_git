@@ -18,7 +18,7 @@ $('<p><span>这是使用jQuery添加的内容</span></p>');
 
 将创建的`DOM`节点放入所添加元素的后面
 
-#### 	`appenTo（）`
+#### 	`appendTo（）`
 
 #### 	`prepend（）`
 

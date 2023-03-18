@@ -45,7 +45,7 @@
 
 下面的例子返回属于 `<div>` 后代的所有 `<span>` 元素
 
-```
+```html
     <div class="nav">
         <p>nav的亲儿子</p>
         <div>
@@ -112,9 +112,9 @@
 
 
 
-## jQuery 遍历 - 同胞(siblings)
+## jQuery 遍历 - 兄弟(siblings)
 
-### siblings(selector)	被选元素的所有同胞元素，不算自己
+### siblings(selector)	被选元素的所有兄弟元素，不算自己
 
 ```
     <ul>
@@ -128,7 +128,7 @@
     </script>
 ```
 
-### next() 	返回被选元素的下一个同胞元素
+### next() 	返回被选元素的下一个兄弟元素
 
 ```
     <ul>
@@ -187,7 +187,7 @@
 
 
 
-## eq（） 下标
+## eq（） 下标/索引
 
 ```
     <ul>

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tab td > img{
+    width: 100px;
+}
+.val{
+    width: 25px;
+}
+.add,.remove{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #007dfc;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    line-height: 20px;
+}
+.geshu{
+    color: red;
+}

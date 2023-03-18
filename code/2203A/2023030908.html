@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="checkbox">湘菜
+    <input type="checkbox">川菜
+    <input type="checkbox">粤菜
+    <input type="checkbox">鲁菜
+    <input type="checkbox">闽菜
+    <input type="checkbox">苏菜
+    <input type="checkbox">浙菜
+    <input type="checkbox">徽菜
+	<br/>
+    <button id="all">全选</button>
+    <button id="notall">全不选</button>
+
+    <script>
+        $('#all').click(function(){
+            $('input').attr('checked',true);
+        })
+
+        $('#notall').click(function(){
+            $('input').attr('checked',false);
+        })
+    </script>
+</body>
+</html>

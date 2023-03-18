@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="box">
+        <span>1</span>
+        <span>2</span>
+        <span class="sp">3</span>
+        <span>4</span>
+        <span class="sp">5</span>
+        <span class="sp">6</span>
+    </div>
+
+    <script>
+        // filter('.sp') , 过滤关于 .sp 相关的元素
+        // $('span').filter('.sp').css('color','red');
+
+        // not('.sp') , 排除not中的元素
+        // $('span').not('.sp').css('color','red');
+
+        // eq(索引值) ， 索引，从0开始
+        $('span').eq(1).css('color','red');
+    </script>
+</body>
+</html>

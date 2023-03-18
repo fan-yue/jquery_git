@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="a">1</div>
+    <div id="a">2</div>
+    <div id="a">3</div>
+
+    <script>
+        /* $(function(){
+            $('#a').css({
+                background:'red',
+                color:'white',
+                border:'1px solid black'
+            })
+        }) */
+
+        // id选择器，多个相同ID之下，只有第一个会生效
+        $('#a').css({
+            background:'red',
+            color:'white',
+            border:'1px solid black'
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <p>nav的亲儿子，p</p>
+        <div>
+            <p>nav的孙子，p</p>
+            <span>nav的孙子，span</span>
+        </div>
+        <p class="p2">nav的亲儿子，P2</p>
+        <span>nav的亲儿子，span</span>
+    </div>
+
+    <script>
+        // children( ) ，所有的后代元素
+        // children('.p2') , 指定的后代元素
+        // $('.nav').children('.p2').css('color','red');
+
+        // find('指定的元素') , 寻找指定的元素
+        // $('.nav').find('p').css('color','red');
+    </script>
+</body>
+</html>

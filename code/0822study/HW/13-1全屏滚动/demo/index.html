@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
+    <style>
+        #fp-nav ul li a.active span,
+        #fp-nav ul li:hover a span{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="dowebok">
+        <div class="section">
+            <h3>第一屏</h3>
+        </div>
+        <div class="section">
+            <h3>第二屏</h3>
+        </div>
+        <div class="section">
+            <div class="slide">第三屏的第一屏</div>
+            <div class="slide">第三屏的第二屏</div>
+            <div class="slide">第三屏的第三屏</div>
+            <div class="slide">第三屏的第四屏</div>
+        </div>
+        <div class="section">
+            <h3>第四屏</h3>
+        </div>
+        <div class="section">
+            <h3>第无屏</h3>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $('#dowebok').fullpage({
+                sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','black'],
+                navigation: true,
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+                menu: '#myMenu'
+            });
+        });
+    </script>
+</body>
+</html>
